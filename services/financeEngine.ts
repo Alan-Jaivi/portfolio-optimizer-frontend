@@ -4,12 +4,8 @@ import { Asset, AssetData, Edge, OptimizationResult, BacktestResult, BacktestCon
 // CONFIGURACIÓN DE INTEGRACIÓN BACKEND (Python/FastAPI)
 // ==========================================
 // Establecer en FALSE para intentar usar el Backend Python real
-
-const USE_MOCK_DATA = false;
-const API_URL = "https://portfolio-optimizer-api.fly.dev/api";
-
-//const USE_MOCK_DATA = false; 
-//const API_URL = "http://localhost:8000/api"; 
+const USE_MOCK_DATA = true; 
+const API_URL = "http://localhost:8000/api"; 
 
 // ==========================================
 // DATOS SIMULADOS (Simulando Base de Datos)
@@ -53,17 +49,25 @@ const MOCK_DB_ASSETS: Asset[] = [
 
 export const fetchAvailableAssets = async (): Promise<Asset[]> => {
   if (!USE_MOCK_DATA) {
+    // ---------------------------------------------------------
+    // INTEGRACIÓN BACKEND: GET /api/assets
+    // ---------------------------------------------------------
+    // 1. El backend (src/api.py) lee la configuración regional en `config/regions/*.yml`.
+    // 2. Verifica qué datos existen en `data/raw/prices.parquet`.
+    // 3. Retorna la lista de activos disponibles.
+    /*
     try {
       const response = await fetch(`${API_URL}/assets`);
       if (!response.ok) throw new Error('Backend offline');
       const data = await response.json();
       return data.assets; 
     } catch (e) {
-      console.error("Error al conectar con el backend:", e);
-      throw e; // ← No usar fallback: debe fallar si hay error
+      console.error("Usando Datos Mock debido a error de conexión:", e);
     }
+    */
   }
 
+  // Fallback a Datos Mock
   return new Promise((resolve) => {
     setTimeout(() => resolve(MOCK_DB_ASSETS), 600);
   });
