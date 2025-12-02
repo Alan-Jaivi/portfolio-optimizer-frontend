@@ -44,7 +44,7 @@ const NetworkGraph: React.FC<Props> = ({ nodes, edges, highlightPath = [] }) => 
       .attr("orient", "auto")
       .append("path")
       .attr("d", "M0,-5L10,0L0,5")
-      .attr("fill", "#64748b");
+      .attr("fill", "#94a3b8"); // Lighter marker color
 
     // Draw Links
     const link = svg.append("g")
@@ -52,7 +52,9 @@ const NetworkGraph: React.FC<Props> = ({ nodes, edges, highlightPath = [] }) => 
       .selectAll("line")
       .data(graphLinks)
       .enter().append("line")
-      .attr("stroke-width", d => Math.min(Math.sqrt(d.weight) / 10, 3)) // Scale down thick weights
+      // MEJORA: Fórmula de grosor ajustada para mayor visibilidad
+      // Mínimo 1.5px, máximo 5px basado en la raíz cuadrada del peso
+      .attr("stroke-width", d => Math.min(Math.max(Math.sqrt(d.weight), 1.5), 6))
       .attr("stroke", d => {
         // Highlight logic
         if (highlightPath.length > 1) {
@@ -64,12 +66,24 @@ const NetworkGraph: React.FC<Props> = ({ nodes, edges, highlightPath = [] }) => 
           
           // Check if this link connects two consecutive nodes in the path
           if (srcIdx !== -1 && tgtIdx !== -1 && Math.abs(srcIdx - tgtIdx) === 1) {
-            return "#3b82f6"; // Blue 500
+            return "#3b82f6"; // Blue 500 (Ruta óptima)
           }
         }
-        return "#334155"; // Slate 700
+        return "#64748b"; // Slate 500 (Mucho más visible que el Slate 700 anterior)
       })
-      .attr("opacity", 0.6);
+      .attr("opacity", d => {
+         // Mayor opacidad para la ruta resaltada
+         if (highlightPath.length > 1) {
+            const src = (d.source as any).id || d.source;
+            const tgt = (d.target as any).id || d.target;
+            const srcIdx = highlightPath.indexOf(src);
+            const tgtIdx = highlightPath.indexOf(tgt);
+            if (srcIdx !== -1 && tgtIdx !== -1 && Math.abs(srcIdx - tgtIdx) === 1) {
+                return 1.0;
+            }
+         }
+         return 0.5; // Opacidad base aumentada
+      });
 
     // Draw Nodes
     const node = svg.append("g")
@@ -86,8 +100,8 @@ const NetworkGraph: React.FC<Props> = ({ nodes, edges, highlightPath = [] }) => 
     node.append("circle")
       .attr("r", 20)
       .attr("fill", d => highlightPath.includes(d.id) ? "#3b82f6" : "#1e293b")
-      .attr("stroke", d => highlightPath.includes(d.id) ? "#60a5fa" : "#475569")
-      .attr("stroke-width", 2)
+      .attr("stroke", d => highlightPath.includes(d.id) ? "#60a5fa" : "#94a3b8") // Lighter stroke
+      .attr("stroke-width", d => highlightPath.includes(d.id) ? 3 : 2)
       .attr("class", "transition-all duration-300");
 
     // Node Labels
@@ -96,10 +110,11 @@ const NetworkGraph: React.FC<Props> = ({ nodes, edges, highlightPath = [] }) => 
       .attr("x", 0)
       .attr("y", 4)
       .attr("text-anchor", "middle")
-      .attr("fill", "#e2e8f0")
-      .attr("font-size", "10px")
+      .attr("fill", "#f8fafc") // Almost white text
+      .attr("font-size", "11px")
       .attr("font-weight", "bold")
-      .style("pointer-events", "none");
+      .style("pointer-events", "none")
+      .style("text-shadow", "0px 1px 2px rgba(0,0,0,0.8)"); // Shadow for readability over lines
 
     simulation.on("tick", () => {
       link
@@ -136,12 +151,12 @@ const NetworkGraph: React.FC<Props> = ({ nodes, edges, highlightPath = [] }) => 
   }, [nodes, edges, highlightPath]);
 
   return (
-    <div className="w-full h-full bg-slate-950 rounded-xl overflow-hidden relative">
+    <div className="w-full h-full bg-slate-950 rounded-xl overflow-hidden relative border border-slate-800">
       <svg ref={svgRef} className="w-full h-full" style={{ minHeight: '500px' }}></svg>
-      <div className="absolute top-4 right-4 bg-slate-900/80 p-3 rounded-lg border border-slate-700 backdrop-blur-sm">
+      <div className="absolute top-4 right-4 bg-slate-900/90 p-3 rounded-lg border border-slate-700 backdrop-blur-sm shadow-xl">
         <h4 className="text-xs font-bold text-slate-300 uppercase mb-2">Leyenda</h4>
         <div className="flex items-center gap-2 mb-1">
-          <div className="w-3 h-3 rounded-full bg-slate-800 border border-slate-600"></div>
+          <div className="w-3 h-3 rounded-full bg-slate-800 border border-slate-400"></div>
           <span className="text-xs text-slate-400">Nodo de Activo</span>
         </div>
         <div className="flex items-center gap-2 mb-1">
@@ -149,8 +164,8 @@ const NetworkGraph: React.FC<Props> = ({ nodes, edges, highlightPath = [] }) => 
           <span className="text-xs text-slate-400">Ruta Optimizada</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-8 h-[2px] bg-slate-600"></div>
-          <span className="text-xs text-slate-400">Enlace de Covarianza</span>
+          <div className="w-8 h-[3px] bg-slate-500"></div>
+          <span className="text-xs text-slate-400">Covarianza (Grosor = Intensidad)</span>
         </div>
       </div>
     </div>
