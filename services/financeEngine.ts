@@ -53,25 +53,17 @@ const MOCK_DB_ASSETS: Asset[] = [
 
 export const fetchAvailableAssets = async (): Promise<Asset[]> => {
   if (!USE_MOCK_DATA) {
-    // ---------------------------------------------------------
-    // INTEGRACIÓN BACKEND: GET /api/assets
-    // ---------------------------------------------------------
-    // 1. El backend (src/api.py) lee la configuración regional en `config/regions/*.yml`.
-    // 2. Verifica qué datos existen en `data/raw/prices.parquet`.
-    // 3. Retorna la lista de activos disponibles.
-    
     try {
       const response = await fetch(`${API_URL}/assets`);
       if (!response.ok) throw new Error('Backend offline');
       const data = await response.json();
       return data.assets; 
     } catch (e) {
-      console.error("Usando Datos Mock debido a error de conexión:", e);
+      console.error("Error al conectar con el backend:", e);
+      throw e; // ← No usar fallback: debe fallar si hay error
     }
-    
   }
 
-  // Fallback a Datos Mock
   return new Promise((resolve) => {
     setTimeout(() => resolve(MOCK_DB_ASSETS), 600);
   });
