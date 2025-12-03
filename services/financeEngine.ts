@@ -532,6 +532,46 @@ const MOCK_DB_ASSETS: Asset[] = [
   { ticker: '601328.SS', name: 'Bank of Communications Co Ltd', region: 'Asia Pacífico', sector: 'Finanzas', price: 4.10, change: 0.1 },
   { ticker: '601998.SS', name: 'China CITIC Bank Corp Ltd', region: 'Asia Pacífico', sector: 'Finanzas', price: 3.90, change: -0.1 },
 
+
+
+  { ticker: 'EEM', name: 'iShares MSCI Emerging Markets ETF', region: 'Global EM', sector: 'ETF', price: 41.22, change: -0.3 },
+{ ticker: 'VWO', name: 'Vanguard FTSE Emerging Markets ETF', region: 'Global EM', sector: 'ETF', price: 43.87, change: 0.15 },
+{ ticker: 'EMXC', name: 'iShares MSCI Emerging Markets ex China ETF', region: 'Global EM', sector: 'ETF', price: 55.71, change: 0.32 },
+{ ticker: 'SCHE', name: 'Schwab Emerging Markets Equity ETF', region: 'Global EM', sector: 'ETF', price: 26.44, change: -0.12 },
+{ ticker: 'IEMG', name: 'iShares Core MSCI Emerging Markets ETF', region: 'Global EM', sector: 'ETF', price: 58.93, change: 0.09 },
+
+// India
+{ ticker: 'RELIANCE.NS', name: 'Reliance Industries', region: 'India', sector: 'Energía / Petroquímica', price: 123.55, change: -0.2 },
+{ ticker: 'TCS.NS', name: 'Tata Consultancy Services', region: 'India', sector: 'Tecnología', price: 44.30, change: 0.18 },
+{ ticker: 'INFY', name: 'Infosys Ltd', region: 'India', sector: 'Tecnología', price: 17.22, change: -0.05 },
+{ ticker: 'HDB', name: 'HDFC Bank', region: 'India', sector: 'Finanzas', price: 58.11, change: 0.21 },
+{ ticker: 'WIT', name: 'Wipro Ltd', region: 'India', sector: 'Tecnología', price: 5.09, change: 0.03 },
+
+// China
+{ ticker: 'BABA', name: 'Alibaba Group', region: 'China', sector: 'Tecnología / E-commerce', price: 73.10, change: -0.50 },
+{ ticker: 'JD', name: 'JD.com', region: 'China', sector: 'Tecnología / E-commerce', price: 24.91, change: -0.12 },
+{ ticker: 'PDD', name: 'Pinduoduo', region: 'China', sector: 'Tecnología / E-commerce', price: 132.33, change: 0.80 },
+{ ticker: 'TCEHY', name: 'Tencent Holdings', region: 'China', sector: 'Tecnología', price: 42.88, change: 0.15 },
+{ ticker: 'NIO', name: 'NIO Inc', region: 'China', sector: 'Vehículos Eléctricos', price: 6.25, change: -0.10 },
+
+// Brasil
+{ ticker: 'VALE', name: 'Vale S.A.', region: 'Brasil', sector: 'Minería', price: 12.77, change: -0.05 },
+{ ticker: 'PBR', name: 'Petrobras', region: 'Brasil', sector: 'Energía – Petróleo', price: 16.10, change: 0.12 },
+{ ticker: 'ABEV', name: 'Ambev S.A.', region: 'Brasil', sector: 'Consumo – Bebidas', price: 2.91, change: -0.01 },
+{ ticker: 'ITUB', name: 'Itaú Unibanco', region: 'Brasil', sector: 'Finanzas – Banca', price: 6.38, change: 0.04 },
+{ ticker: 'GGB', name: 'Gerdau S.A.', region: 'Brasil', sector: 'Acero / Materiales', price: 4.95, change: -0.06 },
+
+// Sudáfrica
+{ ticker: 'SBSW', name: 'Sibanye Stillwater', region: 'Sudáfrica', sector: 'Minería – Metales preciosos', price: 4.22, change: -0.11 },
+{ ticker: 'NPSNY', name: 'Naspers Ltd', region: 'Sudáfrica', sector: 'Tecnología / Medios', price: 35.40, change: 0.22 },
+{ ticker: 'ANGPY', name: 'Anglo American Platinum', region: 'Sudáfrica', sector: 'Minería', price: 42.13, change: 0.10 },
+{ ticker: 'SOL', name: 'Sasol Ltd', region: 'Sudáfrica', sector: 'Energía – Petroquímica', price: 9.81, change: -0.02 },
+
+// Arabia Saudita
+{ ticker: '2222.SR', name: 'Saudi Aramco', region: 'Arabia Saudita', sector: 'Energía – Petróleo', price: 8.70, change: 0.01 },
+{ ticker: '1180.SR', name: 'Al Rajhi Bank', region: 'Arabia Saudita', sector: 'Finanzas', price: 16.95, change: -0.08 },
+{ ticker: '2010.SR', name: 'Sabic', region: 'Arabia Saudita', sector: 'Materiales – Petroquímica', price: 25.10, change: 0.12 },
+
 ];
 
 export const fetchAvailableAssets = async (): Promise<Asset[]> => {
