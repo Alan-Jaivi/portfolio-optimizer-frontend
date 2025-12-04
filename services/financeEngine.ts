@@ -1041,6 +1041,111 @@ const MOCK_DB_ASSETS: Asset[] = [
   { ticker: 'THCX', name: 'AXS Cannabis', region: 'Mercados Emergentes', sector: 'Cannabis', price: 18.00, change: 2.2 },
   { ticker: 'MJUS', name: 'ETFMG US Alt Harvest', region: 'Mercados Emergentes', sector: 'Cannabis', price: 2.10, change: 3.0 },
 
+ // --- ETFS ESPECÍFICOS POR PAÍS/REGIÓN ---
+  { ticker: 'EWZ', name: 'iShares MSCI Brazil', region: 'Mercados Emergentes', sector: 'ETF', price: 32.00, change: 1.4 },
+  { ticker: 'EWW', name: 'iShares MSCI Mexico', region: 'Mercados Emergentes', sector: 'ETF', price: 62.00, change: 0.8 },
+  { ticker: 'FXI', name: 'iShares China Large-Cap', region: 'Mercados Emergentes', sector: 'ETF', price: 26.50, change: 0.2 },
+  { ticker: 'MCHI', name: 'iShares MSCI China', region: 'Mercados Emergentes', sector: 'ETF', price: 42.00, change: 0.5 },
+  { ticker: 'INDA', name: 'iShares MSCI India', region: 'Mercados Emergentes', sector: 'ETF', price: 54.00, change: 1.1 },
+  { ticker: 'EWY', name: 'iShares MSCI South Korea', region: 'Mercados Emergentes', sector: 'ETF', price: 64.00, change: 0.9 },
+  { ticker: 'EWT', name: 'iShares MSCI Taiwan', region: 'Mercados Emergentes', sector: 'ETF', price: 52.00, change: 1.5 },
+  { ticker: 'EZA', name: 'iShares MSCI South Africa', region: 'Mercados Emergentes', sector: 'ETF', price: 44.00, change: 0.7 },
+  { ticker: 'TUR', name: 'iShares MSCI Turkey', region: 'Mercados Emergentes', sector: 'ETF', price: 38.00, change: 1.5 },
+  { ticker: 'THD', name: 'iShares MSCI Thailand', region: 'Mercados Emergentes', sector: 'ETF', price: 62.00, change: 0.3 },
+  { ticker: 'EIDO', name: 'iShares MSCI Indonesia', region: 'Mercados Emergentes', sector: 'ETF', price: 21.50, change: 0.4 },
+  { ticker: 'EPHE', name: 'iShares MSCI Philippines', region: 'Mercados Emergentes', sector: 'ETF', price: 28.50, change: -0.5 },
+  { ticker: 'EWM', name: 'iShares MSCI Malaysia', region: 'Mercados Emergentes', sector: 'ETF', price: 20.00, change: 0.2 },
+  { ticker: 'VNM', name: 'VanEck Vietnam ETF', region: 'Mercados Emergentes', sector: 'ETF', price: 12.50, change: 0.8 },
+  { ticker: 'ECH', name: 'iShares MSCI Chile', region: 'Mercados Emergentes', sector: 'ETF', price: 26.00, change: 0.2 },
+  { ticker: 'EPU', name: 'iShares MSCI Peru', region: 'Mercados Emergentes', sector: 'ETF', price: 28.00, change: 1.0 },
+  { ticker: 'ARGT', name: 'Global X MSCI Argentina', region: 'Mercados Emergentes', sector: 'ETF', price: 54.00, change: 2.8 },
+  { ticker: 'KSA', name: 'iShares MSCI Saudi Arabia', region: 'Mercados Emergentes', sector: 'ETF', price: 42.00, change: 0.5 },
+  { ticker: 'GULF', name: 'WisdomTree Middle East', region: 'Mercados Emergentes', sector: 'ETF', price: 21.00, change: 0.3 },
+
+  // --- ACCIONES AMÉRICA LATINA (ADRs & Locales) ---
+  // Brasil
+  { ticker: 'PBR', name: 'Petrobras', region: 'Mercados Emergentes', sector: 'Energía', price: 15.20, change: -1.2 },
+  { ticker: 'VALE', name: 'Vale S.A.', region: 'Mercados Emergentes', sector: 'Materiales', price: 12.80, change: 0.5 },
+  { ticker: 'ITUB', name: 'Itaú Unibanco', region: 'Mercados Emergentes', sector: 'Finanzas', price: 6.50, change: 0.8 },
+  { ticker: 'BBD', name: 'Bradesco', region: 'Mercados Emergentes', sector: 'Finanzas', price: 3.10, change: 0.2 },
+  { ticker: 'NU', name: 'Nu Holdings', region: 'Mercados Emergentes', sector: 'Finanzas', price: 11.50, change: 2.5 },
+  { ticker: 'ABEV', name: 'Ambev', region: 'Mercados Emergentes', sector: 'Consumo', price: 2.40, change: -0.3 },
+  { ticker: 'ERJ', name: 'Embraer', region: 'Mercados Emergentes', sector: 'Industria', price: 24.50, change: 3.1 },
+  { ticker: 'STNE', name: 'StoneCo', region: 'Mercados Emergentes', sector: 'Tecnología', price: 16.80, change: 1.5 },
+  { ticker: 'PAGS', name: 'PagSeguro', region: 'Mercados Emergentes', sector: 'Tecnología', price: 12.20, change: 0.9 },
+  { ticker: 'SID', name: 'CSN Siderúrgica', region: 'Mercados Emergentes', sector: 'Materiales', price: 3.20, change: -0.5 },
+  { ticker: 'GGB', name: 'Gerdau', region: 'Mercados Emergentes', sector: 'Materiales', price: 4.50, change: 0.4 },
+  { ticker: 'SUZ', name: 'Suzano', region: 'Mercados Emergentes', sector: 'Materiales', price: 9.80, change: 1.1 },
+  { ticker: 'BRFS', name: 'BRF S.A.', region: 'Mercados Emergentes', sector: 'Consumo', price: 3.50, change: -0.2 },
+  
+  // México
+  { ticker: 'AMX', name: 'América Móvil', region: 'Mercados Emergentes', sector: 'Telecom', price: 18.20, change: -0.5 },
+  { ticker: 'KOF', name: 'Coca-Cola FEMSA', region: 'Mercados Emergentes', sector: 'Consumo', price: 92.00, change: 0.6 },
+  { ticker: 'FMX', name: 'Fomento Económico', region: 'Mercados Emergentes', sector: 'Consumo', price: 125.00, change: 0.9 },
+  { ticker: 'CX', name: 'Cemex', region: 'Mercados Emergentes', sector: 'Materiales', price: 7.80, change: 1.5 },
+  { ticker: 'PAC', name: 'Grupo Aero. Pacífico', region: 'Mercados Emergentes', sector: 'Industria', price: 165.00, change: 1.2 },
+  { ticker: 'ASR', name: 'Grupo Aero. Sureste', region: 'Mercados Emergentes', sector: 'Industria', price: 285.00, change: 0.8 },
+  
+  // Argentina / Uruguay / Chile / Otros
+  { ticker: 'MELI', name: 'MercadoLibre', region: 'Mercados Emergentes', sector: 'E-commerce', price: 1620.00, change: 2.5 },
+  { ticker: 'GLOB', name: 'Globant', region: 'Mercados Emergentes', sector: 'Tecnología', price: 185.00, change: 1.8 },
+  { ticker: 'YPF', name: 'YPF S.A.', region: 'Mercados Emergentes', sector: 'Energía', price: 22.00, change: 3.5 },
+  { ticker: 'PAM', name: 'Pampa Energía', region: 'Mercados Emergentes', sector: 'Utilities', price: 48.00, change: 1.2 },
+  { ticker: 'TX', name: 'Ternium', region: 'Mercados Emergentes', sector: 'Materiales', price: 42.00, change: 0.6 },
+  { ticker: 'CPA', name: 'Copa Holdings', region: 'Mercados Emergentes', sector: 'Industria', price: 98.00, change: 1.4 },
+  { ticker: 'SQM', name: 'SQM', region: 'Mercados Emergentes', sector: 'Materiales', price: 48.00, change: -1.5 },
+  { ticker: 'BCH', name: 'Banco de Chile', region: 'Mercados Emergentes', sector: 'Finanzas', price: 21.00, change: 0.5 },
+  { ticker: 'EC', name: 'Ecopetrol', region: 'Mercados Emergentes', sector: 'Energía', price: 11.20, change: -0.8 },
+  { ticker: 'CIB', name: 'Bancolombia', region: 'Mercados Emergentes', sector: 'Finanzas', price: 32.00, change: 1.4 },
+  { ticker: 'BAP', name: 'Credicorp', region: 'Mercados Emergentes', sector: 'Finanzas', price: 145.00, change: 0.3 },
+
+  // --- ACCIONES ASIA EMERGENTE (ADRs) ---
+  // China
+  { ticker: 'BABA', name: 'Alibaba Group', region: 'Mercados Emergentes', sector: 'Consumo', price: 74.00, change: -0.5 },
+  { ticker: 'JD', name: 'JD.com', region: 'Mercados Emergentes', sector: 'Consumo', price: 28.00, change: -1.2 },
+  { ticker: 'PDD', name: 'PDD Holdings', region: 'Mercados Emergentes', sector: 'Consumo', price: 115.00, change: 3.5 },
+  { ticker: 'BIDU', name: 'Baidu', region: 'Mercados Emergentes', sector: 'Tecnología', price: 95.00, change: 0.8 },
+  { ticker: 'NTES', name: 'NetEase', region: 'Mercados Emergentes', sector: 'Tecnología', price: 92.00, change: 1.5 },
+  { ticker: 'TCOM', name: 'Trip.com', region: 'Mercados Emergentes', sector: 'Consumo', price: 48.00, change: 2.1 },
+  { ticker: 'NIO', name: 'NIO Inc.', region: 'Mercados Emergentes', sector: 'Automotriz', price: 5.50, change: -2.5 },
+  { ticker: 'LI', name: 'Li Auto', region: 'Mercados Emergentes', sector: 'Automotriz', price: 28.00, change: 0.5 },
+  { ticker: 'XPEV', name: 'XPeng', region: 'Mercados Emergentes', sector: 'Automotriz', price: 8.20, change: -1.8 },
+  { ticker: 'BILI', name: 'Bilibili', region: 'Mercados Emergentes', sector: 'Tecnología', price: 12.50, change: 2.2 },
+  { ticker: 'ZTO', name: 'ZTO Express', region: 'Mercados Emergentes', sector: 'Logística', price: 21.00, change: 0.4 },
+  { ticker: 'VIPS', name: 'Vipshop', region: 'Mercados Emergentes', sector: 'Consumo', price: 16.00, change: 1.1 },
+  { ticker: 'HTHT', name: 'H World Group', region: 'Mercados Emergentes', sector: 'Turismo', price: 36.00, change: 0.8 },
+  { ticker: 'DQ', name: 'Daqo New Energy', region: 'Mercados Emergentes', sector: 'Energía', price: 24.00, change: -1.5 },
+  { ticker: 'JKS', name: 'JinkoSolar', region: 'Mercados Emergentes', sector: 'Energía', price: 26.50, change: -0.9 },
+  
+  // Taiwan / Corea
+  { ticker: 'TSM', name: 'Taiwan Semi.', region: 'Mercados Emergentes', sector: 'Semiconductores', price: 142.00, change: 2.8 },
+  { ticker: 'UMC', name: 'United Microelec.', region: 'Mercados Emergentes', sector: 'Semiconductores', price: 8.50, change: 1.2 },
+  { ticker: 'ASX', name: 'ASE Technology', region: 'Mercados Emergentes', sector: 'Semiconductores', price: 10.50, change: 1.0 },
+  { ticker: 'PKX', name: 'POSCO Holdings', region: 'Mercados Emergentes', sector: 'Materiales', price: 85.00, change: 1.8 },
+  { ticker: 'KB', name: 'KB Financial', region: 'Mercados Emergentes', sector: 'Finanzas', price: 52.00, change: 0.7 },
+  { ticker: 'SKM', name: 'SK Telecom', region: 'Mercados Emergentes', sector: 'Telecom', price: 21.00, change: 0.1 },
+  { ticker: 'LPL', name: 'LG Display', region: 'Mercados Emergentes', sector: 'Tecnología', price: 4.80, change: 0.5 },
+
+  // India
+  { ticker: 'INFY', name: 'Infosys', region: 'Mercados Emergentes', sector: 'Tecnología', price: 18.50, change: -0.4 },
+  { ticker: 'HDB', name: 'HDFC Bank', region: 'Mercados Emergentes', sector: 'Finanzas', price: 58.00, change: 0.6 },
+  { ticker: 'IBN', name: 'ICICI Bank', region: 'Mercados Emergentes', sector: 'Finanzas', price: 26.00, change: 1.2 },
+  { ticker: 'MMYT', name: 'MakeMyTrip', region: 'Mercados Emergentes', sector: 'Turismo', price: 68.00, change: 3.1 },
+  { ticker: 'WIT', name: 'Wipro', region: 'Mercados Emergentes', sector: 'Tecnología', price: 5.80, change: -0.2 },
+  { ticker: 'TTM', name: 'Tata Motors', region: 'Mercados Emergentes', sector: 'Automotriz', price: 25.00, change: 2.5 },
+  { ticker: 'RDY', name: 'Dr. Reddy\'s', region: 'Mercados Emergentes', sector: 'Salud', price: 72.00, change: 0.9 },
+
+  // --- ACCIONES EMEA (ADRs) ---
+  { ticker: 'GFI', name: 'Gold Fields', region: 'Mercados Emergentes', sector: 'Materiales', price: 16.50, change: 2.2 },
+  { ticker: 'AU', name: 'AngloGold Ashanti', region: 'Mercados Emergentes', sector: 'Materiales', price: 22.00, change: 1.8 },
+  { ticker: 'SBSW', name: 'Sibanye Stillwater', region: 'Mercados Emergentes', sector: 'Materiales', price: 4.80, change: -1.2 },
+  { ticker: 'HMY', name: 'Harmony Gold', region: 'Mercados Emergentes', sector: 'Materiales', price: 7.20, change: 1.5 },
+  { ticker: 'DRD', name: 'DRDGOLD', region: 'Mercados Emergentes', sector: 'Materiales', price: 8.90, change: 0.8 },
+  { ticker: 'SSL', name: 'Sasol', region: 'Mercados Emergentes', sector: 'Energía', price: 8.50, change: -0.5 },
+  { ticker: 'TKC', name: 'Turkcell', region: 'Mercados Emergentes', sector: 'Telecom', price: 5.50, change: 0.6 },
+
+
+  
 ];
 
 export const fetchAvailableAssets = async (): Promise<Asset[]> => {
