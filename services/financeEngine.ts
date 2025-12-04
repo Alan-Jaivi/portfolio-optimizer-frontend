@@ -215,6 +215,58 @@ const MOCK_DB_ASSETS: Asset[] = [
   { ticker: 'VOO', name: 'Vanguard S&P 500', region: 'Norteamérica', sector: 'ETF', price: 485.00, change: 0.8 },
   { ticker: 'QQQ', name: 'Invesco QQQ', region: 'Norteamérica', sector: 'ETF', price: 450.00, change: 1.3 },
 
+    // --- ADICIONALES DIVERSOS (Norteamérica) ---
+  { ticker: 'ADP', name: 'Automatic Data Processing', region: 'Norteamérica', sector: 'Tecnología', price: 265.00, change: 0.7 },
+  { ticker: 'CTAS', name: 'Cintas Corp.', region: 'Norteamérica', sector: 'Industria', price: 75.00, change: 0.3 },
+  { ticker: 'ROP', name: 'Roper Technologies', region: 'Norteamérica', sector: 'Industria', price: 520.00, change: 0.5 },
+  { ticker: 'ITW', name: 'Illinois Tool Works', region: 'Norteamérica', sector: 'Industria', price: 275.00, change: 0.4 },
+  { ticker: 'EMR', name: 'Emerson Electric', region: 'Norteamérica', sector: 'Industria', price: 140.00, change: 0.6 },
+  { ticker: 'MMM', name: '3M Co.', region: 'Norteamérica', sector: 'Industria', price: 95.00, change: -0.3 },
+  { ticker: 'IBM', name: 'IBM', region: 'Norteamérica', sector: 'Tecnología', price: 175.00, change: 0.2 },
+  { ticker: 'ORCL', name: 'Oracle Corp.', region: 'Norteamérica', sector: 'Tecnología', price: 130.00, change: 1.0 },
+  { ticker: 'SAP', name: 'SAP SE (ADR)', region: 'Norteamérica', sector: 'Tecnología', price: 185.00, change: 0.9 },
+  { ticker: 'CSCO', name: 'Cisco Systems', region: 'Norteamérica', sector: 'Tecnología', price: 48.00, change: -0.2 },
+  { ticker: 'VMW', name: 'VMware', region: 'Norteamérica', sector: 'Tecnología', price: 145.00, change: 0.0 }, // Adquirida
+  { ticker: 'EA', name: 'Electronic Arts', region: 'Norteamérica', sector: 'Tecnología', price: 135.00, change: 1.2 },
+  { ticker: 'TTWO', name: 'Take-Two Interactive', region: 'Norteamérica', sector: 'Tecnología', price: 155.00, change: 1.8 },
+  { ticker: 'ATVI', name: 'Activision Blizzard', region: 'Norteamérica', sector: 'Tecnología', price: 95.00, change: 0.0 }, // Adquirida por MSFT
+  { ticker: 'VRSN', name: 'VeriSign', region: 'Norteamérica', sector: 'Tecnología', price: 175.00, change: 0.6 },
+  { ticker: 'PAYX', name: 'Paychex', region: 'Norteamérica', sector: 'Tecnología', price: 110.00, change: 0.4 },
+  { ticker: 'CTSH', name: 'Cognizant', region: 'Norteamérica', sector: 'Tecnología', price: 75.00, change: -0.5 },
+  { ticker: 'DXC', name: 'DXC Technology', region: 'Norteamérica', sector: 'Tecnología', price: 25.00, change: -1.0 },
+  { ticker: 'WIT', name: 'Wipro (ADR)', region: 'Norteamérica', sector: 'Tecnología', price: 5.50, change: 0.1 },
+  { ticker: 'INFY', name: 'Infosys (ADR)', region: 'Norteamérica', sector: 'Tecnología', price: 18.00, change: 0.3 },
+  { ticker: 'NDSN', name: 'Nordson Corp.', region: 'Norteamérica', sector: 'Industria', price: 260.00, change: 0.2 },
+  { ticker: 'SWK', name: 'Stanley Black & Decker', region: 'Norteamérica', sector: 'Industria', price: 105.00, change: -0.4 },
+  { ticker: 'FAST', name: 'Fastenal', region: 'Norteamérica', sector: 'Industria', price: 65.00, change: 0.5 },
+  { ticker: 'WAB', name: 'Westinghouse Air Brake', region: 'Norteamérica', sector: 'Industria', price: 165.00, change: 0.8 },
+  { ticker: 'PCAR', name: 'Paccar Inc.', region: 'Norteamérica', sector: 'Industria', price: 110.00, change: 0.7 },
+  { ticker: 'ODFL', name: 'Old Dominion Freight', region: 'Norteamérica', sector: 'Transporte', price: 240.00, change: 1.1 },
+  { ticker: 'JBHT', name: 'J.B. Hunt Transport', region: 'Norteamérica', sector: 'Transporte', price: 195.00, change: 0.6 },
+  { ticker: 'CHRW', name: 'C.H. Robinson', region: 'Norteamérica', sector: 'Transporte', price: 98.00, change: -0.2 },
+  { ticker: 'EXPD', name: 'Expeditors Intl', region: 'Norteamérica', sector: 'Logística', price: 120.00, change: 0.4 },
+  { ticker: 'MCK', name: 'McKesson Corp.', region: 'Norteamérica', sector: 'Salud', price: 580.00, change: 0.9 },
+  { ticker: 'CAH', name: 'Cardinal Health', region: 'Norteamérica', sector: 'Salud', price: 105.00, change: 0.3 },
+  { ticker: 'ABC', name: 'AmerisourceBergen', region: 'Norteamérica', sector: 'Salud', price: 185.00, change: 0.5 },
+  { ticker: 'WBA', name: 'Walgreens Boots', region: 'Norteamérica', sector: 'Salud', price: 22.00, change: -0.8 },
+  { ticker: 'RMD', name: 'ResMed', region: 'Norteamérica', sector: 'Salud', price: 240.00, change: 1.3 },
+  { ticker: 'EW', name: 'Edwards Lifesciences', region: 'Norteamérica', sector: 'Salud', price: 82.00, change: -0.4 },
+  { ticker: 'STE', name: 'STERIS', region: 'Norteamérica', sector: 'Salud', price: 210.00, change: 0.7 },
+  { ticker: 'HCA', name: 'HCA Healthcare', region: 'Norteamérica', sector: 'Salud', price: 320.00, change: 1.0 },
+  { ticker: 'UHS', name: 'Universal Health', region: 'Norteamérica', sector: 'Salud', price: 155.00, change: 0.6 },
+  { ticker: 'TJX', name: 'TJX Companies', region: 'Norteamérica', sector: 'Consumo', price: 105.00, change: 0.9 },
+  { ticker: 'ROST', name: 'Ross Stores', region: 'Norteamérica', sector: 'Consumo', price: 130.00, change: 1.2 },
+  { ticker: 'ULTA', name: 'Ulta Beauty', region: 'Norteamérica', sector: 'Consumo', price: 450.00, change: 2.0 },
+  { ticker: 'VFC', name: 'VF Corp.', region: 'Norteamérica', sector: 'Consumo', price: 18.00, change: -1.5 },
+  { ticker: 'TPR', name: 'Tapestry', region: 'Norteamérica', sector: 'Consumo', price: 45.00, change: 0.8 },
+  { ticker: 'LB', name: 'L Brands (Bath & Body)', region: 'Norteamérica', sector: 'Consumo', price: 52.00, change: 0.3 },
+  { ticker: 'GPS', name: 'Gap Inc.', region: 'Norteamérica', sector: 'Consumo', price: 28.00, change: -0.6 },
+  { ticker: 'AEO', name: 'American Eagle', region: 'Norteamérica', sector: 'Consumo', price: 22.00, change: 0.4 },
+  { ticker: 'ANF', name: 'Abercrombie & Fitch', region: 'Norteamérica', sector: 'Consumo', price: 120.00, change: 2.5 },
+  { ticker: 'DLTR', name: 'Dollar Tree', region: 'Norteamérica', sector: 'Consumo', price: 105.00, change: -0.7 },
+  { ticker: 'FRED', name: 'Fred\'s Inc.', region: 'Norteamérica', sector: 'Consumo', price: 0.50, change: -5.0 }, // Ilustrativo / baja liquidez
+  { ticker: 'CROX', name: 'Crocs', region: 'Norteamérica', sector: 'Consumo', price: 75.00, change: 1.8 }
+
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 /////////////////////////////////////////////
