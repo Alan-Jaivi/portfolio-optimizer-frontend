@@ -265,7 +265,7 @@ const MOCK_DB_ASSETS: Asset[] = [
   { ticker: 'ANF', name: 'Abercrombie & Fitch', region: 'Norteamérica', sector: 'Consumo', price: 120.00, change: 2.5 },
   { ticker: 'DLTR', name: 'Dollar Tree', region: 'Norteamérica', sector: 'Consumo', price: 105.00, change: -0.7 },
   { ticker: 'FRED', name: 'Fred\'s Inc.', region: 'Norteamérica', sector: 'Consumo', price: 0.50, change: -5.0 }, // Ilustrativo / baja liquidez
-  { ticker: 'CROX', name: 'Crocs', region: 'Norteamérica', sector: 'Consumo', price: 75.00, change: 1.8 }
+  { ticker: 'CROX', name: 'Crocs', region: 'Norteamérica', sector: 'Consumo', price: 75.00, change: 1.8 },
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
