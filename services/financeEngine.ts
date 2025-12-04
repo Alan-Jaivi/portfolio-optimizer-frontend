@@ -319,7 +319,27 @@ const MOCK_DB_ASSETS: Asset[] = [
   { ticker: 'KLBN11.SA', name: 'Klabin', region: 'Latinoamérica', sector: 'Papel y Celulosa', price: 4.60, change: 0.1 },
   { ticker: 'BBDC4.SA', name: 'Bradesco', region: 'Latinoamérica', sector: 'Finanzas', price: 15.80, change: 0.0 },
   { ticker: 'SUZB3.SA', name: 'Suzano', region: 'Latinoamérica', sector: 'Papel y Celulosa', price: 50.40, change: 0.6 },
-
+  { ticker: 'PBR', name: 'Petrobras', region: 'Latinoamérica', sector: 'Energía', price: 15.20, change: -1.2 },
+  { ticker: 'VALE', name: 'Vale S.A.', region: 'Latinoamérica', sector: 'Materiales', price: 12.80, change: 0.5 },
+  { ticker: 'ITUB', name: 'Itaú Unibanco', region: 'Latinoamérica', sector: 'Finanzas', price: 6.50, change: 0.8 },
+  { ticker: 'BBD', name: 'Bradesco', region: 'Latinoamérica', sector: 'Finanzas', price: 3.10, change: 0.2 },
+  { ticker: 'NU', name: 'Nu Holdings', region: 'Latinoamérica', sector: 'Finanzas', price: 11.50, change: 2.5 },
+  { ticker: 'ABEV', name: 'Ambev', region: 'Latinoamérica', sector: 'Consumo', price: 2.40, change: -0.3 },
+  { ticker: 'ERJ', name: 'Embraer', region: 'Latinoamérica', sector: 'Industria', price: 24.50, change: 3.1 },
+  { ticker: 'SUZ', name: 'Suzano', region: 'Latinoamérica', sector: 'Materiales', price: 9.80, change: 1.1 },
+  { ticker: 'GGB', name: 'Gerdau', region: 'Latinoamérica', sector: 'Materiales', price: 4.50, change: 0.4 },
+  { ticker: 'SID', name: 'CSN Siderúrgica', region: 'Latinoamérica', sector: 'Materiales', price: 3.20, change: -0.5 },
+  { ticker: 'STNE', name: 'StoneCo', region: 'Latinoamérica', sector: 'Tecnología', price: 16.80, change: 1.5 },
+  { ticker: 'PAGS', name: 'PagSeguro', region: 'Latinoamérica', sector: 'Tecnología', price: 12.20, change: 0.9 },
+  { ticker: 'EBR', name: 'Eletrobras', region: 'Latinoamérica', sector: 'Utilities', price: 8.50, change: 1.2 },
+  { ticker: 'SBS', name: 'Sabesp', region: 'Latinoamérica', sector: 'Utilities', price: 10.20, change: 0.6 },
+  { ticker: 'BRFS', name: 'BRF S.A.', region: 'Latinoamérica', sector: 'Consumo', price: 3.50, change: -0.2 },
+  { ticker: 'TIMB', name: 'TIM Brasil', region: 'Latinoamérica', sector: 'Telecom', price: 16.00, change: 0.1 },
+  { ticker: 'VIV', name: 'Telefónica Brasil', region: 'Latinoamérica', sector: 'Telecom', price: 9.80, change: 0.3 },
+  { ticker: 'UGP', name: 'Ultrapar', region: 'Latinoamérica', sector: 'Energía', price: 4.20, change: -0.4 },
+  { ticker: 'CSAN', name: 'Cosan', region: 'Latinoamérica', sector: 'Energía', price: 12.50, change: 0.5 },
+  { ticker: 'AZUL', name: 'Azul S.A.', region: 'Latinoamérica', sector: 'Industria', price: 6.80, change: -2.1 },
+  { ticker: 'GOL', name: 'Gol Linhas Aéreas', region: 'Latinoamérica', sector: 'Industria', price: 2.50, change: -1.5 },
   // Chile 🇨🇱
   { ticker: 'SQM', name: 'Sociedad Química y Minera', region: 'Latinoamérica', sector: 'Minería', price: 45.20, change: -0.2 },
   { ticker: 'ENELCHILE', name: 'Enel Chile', region: 'Latinoamérica', sector: 'Energía', price: 2.10, change: 0.5 },
@@ -442,6 +462,15 @@ const MOCK_DB_ASSETS: Asset[] = [
   { ticker: 'GGBR3.SA', name: 'Gerdau PN', region: 'Latinoamérica', sector: 'Minería', price: 25.60, change: 0.4 },
   { ticker: 'MRVE3.SA', name: 'MRV Engenharia', region: 'Latinoamérica', sector: 'Construcción', price: 9.20, change: 0.1 },
   { ticker: 'RAIL3.SA', name: 'Rumo ON', region: 'Latinoamérica', sector: 'Transporte', price: 4.85, change: 0.2 },
+
+  // --- PANAMÁ ---
+  { ticker: 'CPA', name: 'Copa Holdings', region: 'Latinoamérica', sector: 'Industria', price: 98.00, change: 1.4 },
+
+  // --- OTROS / ETFs LATAM ---
+  { ticker: 'ILF', name: 'iShares Latin America 40', region: 'Latinoamérica', sector: 'ETF', price: 24.00, change: 0.9 },
+  { ticker: 'TX', name: 'Ternium', region: 'Latinoamérica', sector: 'Materiales', price: 42.00, change: 0.6 }, // Luxemburgo/Arg/Mex
+  { ticker: 'AGRO', name: 'Adecoagro', region: 'Latinoamérica', sector: 'Consumo', price: 11.00, change: 0.3 },
+  { ticker: 'ARCO', name: 'Arco Platform', region: 'Latinoamérica', sector: 'Educación', price: 14.00, change: -0.1 },
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 /////////////////////////////////////////////
